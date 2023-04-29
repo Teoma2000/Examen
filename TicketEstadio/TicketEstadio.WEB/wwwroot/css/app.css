@@ -99,3 +99,25 @@ a, .btn-link {
     .loading-progress-text:after {
         content: var(--blazor-load-percentage-text, "Loading");
     }
+
+.boton-verificar {
+    background-color: blue;
+    color: white;
+    transition: background-color 0.2s ease-in-out;
+}
+
+    .boton-verificar[disabled] {
+        cursor: wait;
+    }
+
+    .boton-verificar .animacion-carga {
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .boton-verificar[disabled] .animacion-carga {
+        display: block;
+    }
